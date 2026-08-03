@@ -3,7 +3,7 @@
 ## Overview
 Browser-based Tic Tac Toe application with an Angular frontend and a .NET Core API backend. You can play Two Player Mode locally against another person, or switch to Computer Mode and play against a rule-based AI. 
 
-The backend owns all game state — the board, whose turn it is, move history, win/draw detection, and the scoreboard — so the frontend is really just a thin rendering layer over whatever the API returns.
+The backend owns all game state — the board, whose turn it is, move history, win/draw detection, and the scoreboard 
 
 ## Tech Stack
 
