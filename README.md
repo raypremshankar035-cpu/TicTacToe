@@ -11,7 +11,7 @@ The backend owns all game state — the board, whose turn it is, move history, w
 - **Backend** — ASP.NET Core 8 Web API (C#), split into `TicTacToe.Api` (controllers/DI/middleware) and `TicTacToe.Core` (domain logic)
 - **API** — REST, JSON, Swagger/OpenAPI for interactive docs
 - **Storage** — in-memory (thread-safe `ConcurrentDictionary`), scoped to the life of the backend process
-- **Testing** — xUnit + FluentAssertions on the backend
+- **Testing** — xUnit + FluentAssertions on the backend(TicTacToe.Tests)
 - **IDE** — Visual Studio 2022 & Visual Studio Code
 
 ## Features Implemented
