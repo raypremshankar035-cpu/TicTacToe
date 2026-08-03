@@ -60,9 +60,9 @@ I kept the backend and frontend as separate projects rather than forcing Angular
 
 Full request/response shapes and example payloads are available in Swagger when the API is running.
 
-### Example `GameStateResponse`
-
-```json
+### Example `Games`
+- http://localhost:5274/api/games
+  ```json
 {
   "gameId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
   "board": [["X", null, null], [null, "O", null], [null, null, null]],
