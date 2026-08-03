@@ -1,0 +1,25 @@
+<div class="controls">
+  <label class="mode-select">
+    Mode:
+    <select [value]="selectedMode()" (change)="onModeChange($event)" [disabled]="loading()">
+      <option value="TwoPlayer">Two Player</option>
+      <option value="Computer">Play Against Computer</option>
+    </select>
+  </label>
+ 
+  <button type="button" (click)="newGame.emit()" [disabled]="loading()">
+    New Game
+  </button>
+ 
+  <button type="button" (click)="resetGame.emit()" [disabled]="loading() || !hasActiveGame()">
+    Reset Game
+  </button>
+ 
+  <button type="button" (click)="undo.emit()" [disabled]="loading() || !canUndo()">
+    Undo Last Move
+  </button>
+ 
+  <button type="button" class="danger" (click)="resetScoreboard.emit()" [disabled]="loading()">
+    Reset Scoreboard
+  </button>
+</div>

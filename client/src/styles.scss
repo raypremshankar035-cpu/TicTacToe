@@ -1,0 +1,18 @@
+:root {
+  --primary: #2e74b5;
+  --surface: #ffffff;
+  --surface-hover: #f0f6ff;
+  --surface-muted: #f7f9fb;
+  --border: #d0d7de;
+  --text: #1f2933;
+  --text-muted: #6b7280;
+}
+ 
+* { box-sizing: border-box; }
+ 
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background: #f4f6f8;
+  color: var(--text);
+}

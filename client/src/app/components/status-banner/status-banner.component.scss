@@ -1,0 +1,19 @@
+.status-banner {
+  text-align: center;
+  font-size: 1.15rem;
+  font-weight: 600;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: var(--surface-muted, #eef2f6);
+  color: var(--text, #1f2933);
+ 
+  &.won {
+    background: #d1fadf;
+    color: #027a48;
+  }
+ 
+  &.draw {
+    background: #fef0c7;
+    color: #b54708;
+  }
+}

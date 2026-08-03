@@ -1,0 +1,9 @@
+<div class="status-banner" [class.won]="status() === 'Won'" [class.draw]="status() === 'Draw'">
+  @if (status() === 'Won') {
+    <span>Player {{ winner() }} wins!</span>
+  } @else if (status() === 'Draw') {
+    <span>It's a draw!</span>
+  } @else {
+    <span>Player {{ currentPlayer() }}'s turn</span>
+  }
+</div>

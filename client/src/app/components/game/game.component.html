@@ -1,0 +1,44 @@
+<main class="game-page">
+  <header>
+    <h1>Tic Tac Toe</h1>
+  </header>
+ 
+  @if (errorMessage(); as error) {
+    <div class="error-banner" role="alert">
+      {{ error }}
+      <button type="button" (click)="onDismissError()">Dismiss</button>
+    </div>
+  }
+ 
+  <app-controls
+    [selectedMode]="selectedMode()"
+    [hasActiveGame]="!!game()"
+    [canUndo]="!!game()?.canUndo"
+    [loading]="loading()"
+    (modeChanged)="onModeChanged($event)"
+    (newGame)="onNewGame()"
+    (undo)="onUndo()"
+    (resetGame)="onResetGame()"
+    (resetScoreboard)="onResetScoreboard()"
+  />
+ 
+  <app-status-banner
+    [status]="game()?.status ?? 'InProgress'"
+    [currentPlayer]="game()?.currentPlayer ?? 'X'"
+    [winner]="game()?.winner ?? null"
+  />
+ 
+  <div class="game-layout">
+    <app-board
+      [board]="board()"
+      [winningCells]="winningCells()"
+      [disabled]="boardDisabled()"
+      (cellClicked)="onCellClicked($event)"
+    />
+ 
+    <aside class="side-panel">
+      <app-scoreboard [scoreboard]="scoreboard()" />
+      <app-move-history [moves]="moves()" />
+    </aside>
+  </div>
+</main>

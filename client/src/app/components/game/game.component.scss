@@ -1,0 +1,53 @@
+.game-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 16px;
+
+  h1 { margin: 0; font-size: 1.9rem; }
+}
+
+.error-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fef3f2;
+  color: #b42318;
+  border: 1px solid #fda29b;
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin-bottom: 12px;
+
+  button {
+    background: none;
+    border: none;
+    color: inherit;
+    font-weight: 600;
+    cursor: pointer;
+  }
+}
+
+.game-layout {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.side-panel {
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+@media (max-width: 640px) {
+  .game-layout { flex-direction: column; align-items: center; }
+  .side-panel { width: 100%; max-width: 320px; }
+}

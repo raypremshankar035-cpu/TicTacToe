@@ -1,0 +1,38 @@
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+ 
+.mode-select {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+}
+ 
+button {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: 1px solid var(--border, #d0d7de);
+  background: var(--surface, #ffffff);
+  cursor: pointer;
+  font-weight: 600;
+ 
+  &:hover:not(:disabled) {
+    background: var(--surface-hover, #f0f6ff);
+  }
+ 
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+ 
+  &.danger {
+    color: #b42318;
+    border-color: #fda29b;
+  }
+}
