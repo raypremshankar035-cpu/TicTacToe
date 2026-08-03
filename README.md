@@ -35,9 +35,8 @@ The backend owns all game state — the board, whose turn it is, move history, w
 ## How to Run the Frontend Locally
 
 Requires Node.js and npm.
-
+- open client in Visual Studio Code and navigate to client location and follow below command to run  
 ```bash
-cd client
 npm install
 ng serve
 ```
